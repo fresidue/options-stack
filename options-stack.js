@@ -16,7 +16,7 @@ const createStack = function (rootOpts, rootFilter) {
       filter,
       options: assign({}, options)
     });
-    console.log('stack = ', stack);
+    // console.log('stack = ', stack);
   };
   addOptions(rootOpts, rootFilter);
 

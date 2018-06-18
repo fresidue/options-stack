@@ -47,4 +47,8 @@ describe('testing stack', () => {
       a: 'a', b: 'b', c: 'c'
     }));
   });
+
+  after(() => {
+    console.log('\ntests ended:', new Date(), '\n');
+  });
 });
