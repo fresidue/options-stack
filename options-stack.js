@@ -1,9 +1,7 @@
 'use strict';
 
 const assert = require('assert');
-
 const rootKey = Symbol('root');
-const _ = require('lodash');
 
 //
 //  adding object to a stack is overloaded with 2 signatures
@@ -45,10 +43,11 @@ const addOptions = function (stack, ...args) {
 //
 
 const getOptions = (stack, key) => {
-  const filtered = _.reduce(stack, (acc, layer) => {
-    const layerKey = _.get(_.keys(layer), '0', rootKey);
+  const filtered = stack.reduce((acc, layer) => {
+    const layerKeys = Object.keys(layer);
+    const layerKey = layerKeys.length ? layerKeys[0] : rootKey;
     if (key === layerKey || layerKey === rootKey) {
-      return _.assign(acc, layer[layerKey]);
+      return Object.assign(acc, layer[layerKey]);
     }
     return acc;
   }, {});
