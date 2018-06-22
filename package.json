@@ -1,7 +1,7 @@
 {
   "name": "options-stack",
   "version": "1.0.0",
-  "description": "A tool to help manage configs with multiple levels/subtypes",
+  "description": "A tool to help manage subclassable config/options objects",
   "main": "options-stack.js",
   "scripts": {
     "test-watch": "mocha test --watch",
@@ -17,6 +17,7 @@
   "license": "MIT",
   "devDependencies": {
     "lodash": "^4.17.10",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "time-span": "^2.0.0"
   }
 }
