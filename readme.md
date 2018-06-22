@@ -96,3 +96,21 @@ This is also the object returned for any key that does not have any named matche
 ```js
 options.get('worm') // { furry: true, mammal: true, gassy: true }
 ```
+
+## API
+> where `const createStack = require('options-stack')`
+
+### createStack(rootOptions)
+creates a new options stack with rootOptions (optional)
+
+#### addRoot(extraRootOptions)
+adds another layer of root options
+
+#### add(key, opts)
+adds a single layer for the key string
+
+#### add(multiOpts)
+adds multiple layers, one for each key in multiOpts
+
+#### get(key)
+computes and returns the current effective options object for the given key. if `!key` or no options layers exist in the stack for the given key, then the current effective root options are returned as default
