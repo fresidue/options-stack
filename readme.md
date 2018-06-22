@@ -101,16 +101,16 @@ options.get('worm') // { furry: true, mammal: true, gassy: true }
 > where `const createStack = require('options-stack')`
 
 ### createStack(rootOptions)
-creates a new options stack with rootOptions (optional)
+> creates a new options stack with rootOptions (optional)
 
 #### addRoot(extraRootOptions)
-adds another layer of root options
+> adds another layer of root options
 
 #### add(key, opts)
-adds a single layer for the key string
+> adds a single layer for the key string
 
 #### add(multiOpts)
-adds multiple layers, one for each key in multiOpts
+> adds multiple layers, one for each key in multiOpts
 
 #### get(key)
-computes and returns the current effective options object for the given key. if `!key` or no options layers exist in the stack for the given key, then the current effective root options are returned as default
+> computes and returns the current effective options object for the given key. if `!key` or no options layers exist in the stack for the given key, then the current effective root options are returned as default
