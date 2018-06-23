@@ -1,6 +1,6 @@
 {
   "name": "options-stack",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tool to help manage subclassable config/options objects",
   "main": "options-stack.js",
   "scripts": {
