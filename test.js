@@ -99,6 +99,17 @@ describe('testing stack', () => {
     );
   });
 
+  it('last value added should be the used one', () => {
+    const rootOpts = {a: 'a'};
+    const rootMods = {a: 'b'};
+    const specMods = {a: 'c'};
+    const stack = createStack(rootOpts);
+    stack.addRoot(rootMods);
+    stack.add('spec', specMods);
+    assert(stack.get().a === 'b');
+    assert(stack.get('spec').a === 'c');
+  })
+
   after(() => {
     console.log('\ntests ended:', new Date(), 'and took ' + fromBeginning.rounded() + ' ms\n');
   });
