@@ -20,9 +20,6 @@
     "mocha": "^5.2.0",
     "time-span": "^2.0.0"
   },
-  "dependencies": {
-    "time-span": "^2.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fresidue/options-stack.git"
